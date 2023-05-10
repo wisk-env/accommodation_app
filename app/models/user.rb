@@ -7,4 +7,6 @@ class User < ApplicationRecord
   validates :name, presence: true
 
   has_many :rooms, dependent: :destroy
+
+  mount_uploader :avatar, AvatarUploader
 end

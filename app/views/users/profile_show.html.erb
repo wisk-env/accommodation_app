@@ -7,7 +7,7 @@
 <table>
   <tr>
     <th><%= "アイコン画像" %></th>
-    <td><%= @user.name + "のアイコン画像を入れる" %></td>
+    <td><%= image_tag @user.avatar.url %></td>
   </tr>
   <tr>
     <th><%= "名前" %></th>
