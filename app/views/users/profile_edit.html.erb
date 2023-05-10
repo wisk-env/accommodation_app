@@ -1,0 +1,19 @@
+<h2>プロフィール</h2>
+
+<%= form_for(@user, as: @user_name, url: user_profile_path(@user_name), html: { method: :put }) do |f| %>
+  
+  <div class="field">
+    <%= f.label :name, '名前' %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :introduction, '自己紹介' %><br />
+    <%= f.text_area :introduction, autofocus: true, autocomplete: "introduction" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "保存" %>
+  </div>
+<% end %>
+  
+<%= link_to "キャンセル", :back %>
