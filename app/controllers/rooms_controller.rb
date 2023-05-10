@@ -1,4 +1,6 @@
 class RoomsController < ApplicationController
+  before_action :set_q, only: [:index, :search, :show]
+
   def index
     @rooms = Room.all
   end
@@ -19,5 +21,16 @@ class RoomsController < ApplicationController
     else
       render "new"
     end
+  end
+
+  def search
+    @results = @q.result
+    @q = Room.ransack
+  end
+
+  private
+
+  def set_q
+    @q = Room.ransack(params[:q])
   end
 end

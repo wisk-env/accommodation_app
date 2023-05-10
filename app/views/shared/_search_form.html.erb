@@ -1,0 +1,7 @@
+<%= search_form_for @q, url: search_rooms_path do |f| %>
+  <%= f.label :address_cont, "エリア" %>
+  <%= f.text_field :address_cont, placeholder: "エリア名を入力" %>
+  <%= f.label :room_name_or_room_info_cont, "キーワード" %>
+  <%= f.text_field :room_name_or_room_info_cont, placeholder: "キーワード名を入力" %>
+  <%= f.submit "検索" %>
+<% end %>
