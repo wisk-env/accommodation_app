@@ -4,4 +4,5 @@ class Room < ApplicationRecord
   validates :fee, presence: true, numericality: true
   validates :address, presence: true
   
+  belongs_to :user
 end
