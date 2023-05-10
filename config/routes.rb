@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'rooms/index'
+  get 'rooms/show'
+  get 'rooms/new'
   get 'users/account', to: 'users#show'
   get 'users/profile', to: 'users#profile_show'
   get 'users/profile/edit', to: 'users#profile_edit'
