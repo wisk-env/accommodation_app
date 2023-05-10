@@ -3,6 +3,9 @@
 <% end %>  
 
 <% if user_signed_in? %>
+  <div>
+    <%= image_tag current_user.avatar.url, class: 'rounded-circle', size: '70x70' %>
+  </div>
   <div class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <%= current_user.name %>
   </div>
