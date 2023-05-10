@@ -20,6 +20,10 @@
       <th><%= f.label :address, "住所" %></th>
       <td><%= f.text_field :address, placeholder: "住所を入力" %></td>
     </tr>
+    <tr>
+      <th><%= f.label :room_image, "施設画像" %></th>
+      <td><%= f.file_field :room_image %></td>
+    </tr>
   </table>
   <%= f.hidden_field :user_id, value: current_user.id %>
   <div>
