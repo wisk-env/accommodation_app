@@ -1,5 +1,5 @@
 class RoomsController < ApplicationController
-  before_action :set_q, only: [:index, :search, :show]
+  before_action :set_q, only: [:index, :search, :show, :top]
 
   def index
     @rooms = Room.all
@@ -21,6 +21,9 @@ class RoomsController < ApplicationController
     else
       render "new"
     end
+  end
+
+  def top
   end
 
   def search

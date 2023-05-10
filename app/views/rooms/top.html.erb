@@ -1,0 +1,42 @@
+<div>
+  <h1>
+    Potepan Shareで<br>
+    まだ体験したことのない<br>
+    旅をしよう
+  </h1>
+  <div>
+    <%= render "shared/search_form" %> 
+  </div>
+</div>
+
+<h2>おすすめのエリア</h2>
+  <div>
+    <div>
+      <%= link_to ({ controller: "rooms", action: "search", q: {address_cont: "東京"}}) do %>
+        <div>
+          <span>東京</span>
+        </div>
+      <% end %>
+    </div>
+    <div>
+      <%= link_to ({ controller: "rooms", action: "search", q: {address_cont: "大阪"} }) do %>
+        <div>
+          <span>大阪</span>
+        </div>
+      <% end %>
+    </div>
+    <div>
+      <%= link_to ({ controller: "rooms", action: "search", q: {address_cont: "京都"} }) do %>
+        <div>
+          <span>京都</span>
+        </div>
+      <% end %>
+    </div>
+    <div>
+      <%= link_to ({ controller: "rooms", action: "search", q: {address_cont: "札幌"} }) do %>
+        <div>
+          <span>札幌</span>
+        </div>
+      <% end %>  
+    </div> 
+</div>
