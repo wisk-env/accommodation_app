@@ -1,0 +1,27 @@
+<h1>検索結果</h1>
+
+<%= render "shared/search_form" %>
+
+<%= @results.count.to_s + "件が見つかりました。" %>
+
+<% @results.each do |room| %>
+  <div>
+    <div>
+      <%= "施設名 : " %>
+      <%= room.room_name %>
+    </div>
+    <div>
+      <%= "住所 : " %>
+      <%= room.address %>
+    </div>
+    <div>
+      <%= "施設詳細 : " %>
+      <%= room.room_info %>
+    </div>
+    <div>
+      <%= "宿泊料金（/日） : " %>
+      <%= "¥" + room.fee.to_s + "~" %>
+    </div>
+    <%= link_to "詳細はこちら", room_path(room) %>
+  </div>
+<% end %>
