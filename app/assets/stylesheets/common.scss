@@ -30,6 +30,7 @@ table td {
   background-position: 50%;
   height: 750px;
   padding-top: 117px;
+  margin-bottom: 100px;
 }
 
 .first-view-title {
@@ -67,4 +68,11 @@ input[type="text"] {
   background-color: #ff7757;
   border-color: #ff7757;
 }
-  
+ 
+.recommendedareas-section-title {
+  border-bottom: 3px solid #ff7757;
+  width: fit-content;
+  font-size: 34px;
+  line-height: 54px;
+  margin-bottom: 88px;
+}
