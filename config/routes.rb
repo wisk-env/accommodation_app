@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'reservations/index'
   #get 'rooms/index'
   #get 'rooms/show'
   #get 'rooms/new'
@@ -18,5 +19,7 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
+
+  resources :reservations, only: [:index]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
