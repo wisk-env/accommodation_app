@@ -1,5 +1,9 @@
 <h1>予約済み一覧</h1>
 
+<% if flash[:notice] %>
+  <%= flash[:notice] %>
+<% end %>
+
 <table>
   <thead>
     <tr>

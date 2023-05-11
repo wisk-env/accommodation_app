@@ -5,6 +5,17 @@ class ReservationsController < ApplicationController
     @reservations = current_user.reservations
   end
 
+  def create
+    @reservation = Reservation.new(params.require(:reservation).permit(:check_in, :check_out, :number_of_guests, :user_id, :room_id))
+    if @reservation
+      flash[:notice] = "施設の予約が完了しました"
+      redirect_to :reservations
+    else
+      @room = Room.find_by(params[:reservation][:room_id])
+      render template: "rooms/show"
+    end
+  end
+
   def confirm
     @reservation = Reservation.new(params.require(:reservation).permit(:check_in, :check_out, :number_of_guests, :user_id, :room_id))
     if @reservation.save
