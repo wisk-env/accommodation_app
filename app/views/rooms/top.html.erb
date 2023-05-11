@@ -1,11 +1,15 @@
-<div>
-  <h1>
+<div class="first-view">
+  <h1 class="text-center text-white first-view-title">
     Potepan Shareで<br>
     まだ体験したことのない<br>
     旅をしよう
   </h1>
-  <div>
-    <%= render "shared/search_form" %> 
+  <div class="first-view-search">
+    <%= search_form_for @q, url: search_rooms_path do |f| %>
+      <%= f.label :address_cont, "エリアで検索", class: "text-white" %>
+      <%= f.text_field :address_cont, placeholder: "エリア名を入力", class: "form-control" %>
+      <%= f.submit "検索", class: "search-btn bg-coral" %>
+    <% end %>  
   </div>
 </div>
 
