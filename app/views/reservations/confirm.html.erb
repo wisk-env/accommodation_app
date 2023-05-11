@@ -3,11 +3,11 @@
 <table>
   <tr>
     <th>チェックイン</th>
-    <td><%= @reservation.check_in %></td>
+    <td><%= @reservation.check_in.strftime('%Y/%m/%d') %></td>
   </tr>
   <tr>
     <th>チェックアウト</th>
-    <td><%= @reservation.check_out %></td>
+    <td><%= @reservation.check_out.strftime('%Y/%m/%d') %></td>
   </tr>
   <tr>
     <th>日数</th>

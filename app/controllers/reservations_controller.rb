@@ -7,7 +7,7 @@ class ReservationsController < ApplicationController
 
   def create
     @reservation = Reservation.new(params.require(:reservation).permit(:check_in, :check_out, :number_of_guests, :user_id, :room_id))
-    if @reservation
+    if @reservation.save
       flash[:notice] = "施設の予約が完了しました"
       redirect_to :reservations
     else
@@ -18,7 +18,7 @@ class ReservationsController < ApplicationController
 
   def confirm
     @reservation = Reservation.new(params.require(:reservation).permit(:check_in, :check_out, :number_of_guests, :user_id, :room_id))
-    if @reservation.save
+    if @reservation.valid?
       @reservation = Reservation.new(params.require(:reservation).permit(:check_in, :check_out, :number_of_guests, :user_id, :room_id))
       @total_days = (@reservation.check_out - @reservation.check_in).to_i
       @total_price = @reservation.room.fee * @reservation.number_of_guests * (@reservation.check_out - @reservation.check_in).to_i
