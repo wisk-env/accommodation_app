@@ -15,7 +15,6 @@
         <th>チェックイン日</th>
         <th>チェックアウト日</th>
         <th>予約確定日時</th>
-        <th>予約者（User_id）</th>
       </tr>
     </thead>
     <tbody>
@@ -28,7 +27,6 @@
           <td><%= reservation.check_in.strftime('%Y/%m/%d') %></td>
           <td><%= reservation.check_out.strftime('%Y/%m/%d') %></td>
           <td><%= reservation.created_at.strftime('%Y/%m/%d %H:%M') %></td>
-          <td><%= reservation.user_id %></td>
         <tr>
       <% end %>
     </tbody>

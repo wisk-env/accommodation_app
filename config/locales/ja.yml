@@ -31,9 +31,14 @@ ja:
         room_info: 施設詳細
         fee: 料金
         address: 住所
+      reservation:
+        check_in: チェックイン
+        check_out: チェックアウト
+        number_of_guests: 人数
     models:
       user: ユーザー
       room: 施設
+      reservation: 予約
   devise:
     confirmations:
       confirmed: メールアドレスが確認できました。
@@ -151,3 +156,4 @@ ja:
       blank: は必須です
       confirmation: を入力してください
       not_a_number: には数値を入力してください
+      invalid: は無効です

@@ -9,7 +9,6 @@
         <th>紹介文</th>
         <th>料金</th>
         <th>作成日</th>
-        <th>投稿者(仮User_id)</th>
       </tr>
     </thead>
     <tbody>
@@ -20,7 +19,6 @@
           <td><%= room.room_info %></td>
           <td><%= "¥" + room.fee.to_s + "~/ 日" %></td>
           <td><%= room.created_at.strftime('%Y/%m/%d') %></td>
-          <td><%= room.user_id %></td>
         </tr>
       <% end %>
     </tbody>
