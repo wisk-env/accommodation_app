@@ -83,6 +83,7 @@ input[type="text"] {
   font-size: 34px;
   line-height: 54px;
   margin-bottom: 88px;
+  margin-left: 40px;
 }
 
 .section {
@@ -186,4 +187,47 @@ ul {
 .form-label {
   font-size: 20px;
   font-weight: 600;
+}
+
+.recommendedareas {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}  
+
+.area-search {
+  margin: 10px auto;
+  border-radius: 20px;
+}
+
+.area-title {
+  color: #000;
+  background-color: #fff;
+}
+
+.area-img {
+  background-position: center;
+  background-size: cover;
+  width: 400px;
+  height: 455px;
+  padding: 40px 20px;
+  font-size: 50px;
+  justify-content: flex-end;
+  border-radius: 26px;
+}
+
+.tokyo-img {
+  background-image: url("https://rails-02-sample.herokuapp.com/assets/home/recommend-area/tokyo.jpg");
+}
+
+.osaka-img {
+  background-image: url("https://rails-02-sample.herokuapp.com/assets/home/recommend-area/osaka.jpg");  
+}
+
+.kyoto-img {
+  background-image: url("https://rails-02-sample.herokuapp.com/assets/home/recommend-area/kyoto.jpg");    
+}
+
+.sapporo-img {
+  background-image: url("https://rails-02-sample.herokuapp.com/assets/home/recommend-area/sapporo.jpg");      
 }

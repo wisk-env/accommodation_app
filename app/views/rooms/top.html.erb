@@ -13,34 +13,36 @@
   </div>
 </div>
 
-<h2 class="recommendedareas-section-title">おすすめのエリア</h2>
-  <div>
-    <div>
-      <%= link_to ({ controller: "rooms", action: "search", q: {address_cont: "東京"}}) do %>
-        <div>
-          <span>東京</span>
-        </div>
-      <% end %>
-    </div>
-    <div>
-      <%= link_to ({ controller: "rooms", action: "search", q: {address_cont: "大阪"} }) do %>
-        <div>
-          <span>大阪</span>
-        </div>
-      <% end %>
-    </div>
-    <div>
-      <%= link_to ({ controller: "rooms", action: "search", q: {address_cont: "京都"} }) do %>
-        <div>
-          <span>京都</span>
-        </div>
-      <% end %>
-    </div>
-    <div>
-      <%= link_to ({ controller: "rooms", action: "search", q: {address_cont: "札幌"} }) do %>
-        <div>
-          <span>札幌</span>
-        </div>
-      <% end %>  
-    </div> 
+<div class="recommendedareas-section-title">
+  <h2>おすすめのエリア</h2>
+</div>
+<div class="recommendedareas">
+  <div class="area-search">
+    <%= link_to ({ controller: "rooms", action: "search", q: {address_cont: "東京"}}) do %>
+      <div class="area-img tokyo-img">
+        <span class="area-title">東京</span>
+      </div>
+    <% end %>
+  </div>
+  <div class="area-search">
+    <%= link_to ({ controller: "rooms", action: "search", q: {address_cont: "大阪"} }) do %>
+      <div class="area-img osaka-img">
+        <span class="area-title">大阪</span>
+      </div>
+    <% end %>
+  </div>
+  <div class="area-search">
+    <%= link_to ({ controller: "rooms", action: "search", q: {address_cont: "京都"} }) do %>
+      <div class="area-img kyoto-img">
+        <span class="area-title">京都</span>
+      </div>
+    <% end %>
+  </div>
+  <div class="area-search">
+    <%= link_to ({ controller: "rooms", action: "search", q: {address_cont: "札幌"} }) do %>
+      <div class="area-img sapporo-img">
+        <span class="area-title">札幌</span>
+      </div>
+    <% end %>  
+  </div> 
 </div>
