@@ -2,7 +2,7 @@ class RoomsController < ApplicationController
   before_action :set_q, only: [:index, :search, :show, :top]
 
   def index
-    @rooms = Room.all
+    @rooms = current_user.rooms
   end
 
   def show
