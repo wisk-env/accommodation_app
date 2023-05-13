@@ -26,8 +26,14 @@ ja:
         unconfirmed_email: 未確認Eメール
         unlock_token: ロック解除用トークン
         updated_at: 更新日
+      room:
+        room_name: 施設名
+        room_info: 施設詳細
+        fee: 料金
+        address: 住所
     models:
       user: ユーザー
+      room: 施設
   devise:
     confirmations:
       confirmed: メールアドレスが確認できました。
@@ -142,3 +148,6 @@ ja:
       not_saved:
         one: エラーが発生したため %{resource} は保存されませんでした。
         other: "%{count} 件のエラーが発生したため %{resource} は保存されませんでした。"
+      blank: は必須です
+      confirmation: を入力してください
+      not_a_number: には数値を入力してください

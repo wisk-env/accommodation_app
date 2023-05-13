@@ -1,9 +1,7 @@
 <div class="section">
-
-  <%= render "shared/error", obj: @room %>
-
   <div class="form-container">
     <h1 class="page-title">新規登録</h1>
+    <%= render "shared/error", obj: @room %>
     <%= form_with model: @room, local: true do |f| %>
       <div class="room-form-group">
         <%= f.label :room_name, "施設名", class: "room-form-label" %>
