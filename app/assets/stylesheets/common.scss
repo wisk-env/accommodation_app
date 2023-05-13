@@ -306,3 +306,31 @@ ul {
   height: 71px;
   border-radius: 12px;
 }
+
+.search_rooms_form_container {
+  background-color: #dfe2e6;
+  height: 125px;
+}
+
+.search_rooms_form {
+  width: fit-content;
+  margin: auto;
+  padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search_rooms_form_input {
+  width: 285px;
+  padding-left: 45px;
+  border: 1px solid #ced4da;
+}
+
+.search_rooms_form_btn {
+  font-size: 20px;
+  height: 45px;
+  width: 100px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  cursor: pointer;
+}
