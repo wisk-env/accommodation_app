@@ -22,7 +22,7 @@
       <% @reservations.each do |reservation| %>
         <tr>
           <td><%= image_tag reservation.room.room_image.url, size: '160x90' %></td>
-          <td><%= link_to reservation.room.room_name, room_path(reservation.room_id) %></td>
+          <td><%= link_to reservation.room.room_name, room_path(reservation.room_id), class: "no-underline" %></td>
           <td><%= reservation.room.room_info %></td>
           <td><%= reservation.number_of_guests * (reservation.check_out - reservation.check_in).to_i * reservation.room.fee %></td>
           <td><%= reservation.check_in.strftime('%Y/%m/%d') %></td>
