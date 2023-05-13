@@ -70,6 +70,7 @@ input[type="text"] {
   font-size: 20px;
   color: #fff;
   font-weight: 700;
+  cursor: pointer;
 }
   
 .bg-coral {
@@ -230,4 +231,78 @@ ul {
 
 .sapporo-img {
   background-image: url("https://rails-02-sample.herokuapp.com/assets/home/recommend-area/sapporo.jpg");      
+}
+
+.room-details-section {
+  width: 100%;
+  padding: 40px 20px;
+  margin-bottom: 260px;
+}
+
+.back_to_page_link {
+  color: #0071c1;
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+
+.room-info-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.room-details-body {
+  background-color: #fff8f1;
+  padding: 40px 24px;
+}
+
+.room_details_name {
+  font-size: 28px;
+  color: #767e86;
+  padding-left: 40px;
+}
+
+.room_details_address {
+  padding-left: 40px;
+}
+
+.room_details_price {
+  font-size: 25px;
+  color: #ff7757;
+  padding-left: 40px;
+}
+
+.room_for_more_details {
+  padding-left: 40px; 
+}
+
+.reservation-form-container {
+  background-color: #fff8f1;
+  padding: 24px;
+}
+
+.reservation-form {
+  display: flex;
+  gap: 24px;
+  padding: 24px 0;
+  flex-wrap: wrap;
+}
+
+.reservation_form_label {
+  color: #6a6a6a;
+  font-weight: 400;
+}
+
+.reservation_field {
+  height: 50px;
+  width: 200px;
+  border: 1px solid #ced4da;
+}
+
+.reservation-btn {
+  width: 100%;
+  color: #fff;
+  font-size: 24px;
+  height: 71px;
+  border-radius: 12px;
 }
