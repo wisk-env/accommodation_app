@@ -2,7 +2,7 @@
 <div class="room-details-section">
   <h1>施設詳細</h1>
   <div class="back_to_page_link">
-    <%= link_to "← 戻る", 'javascript:history.back()' %>
+    <%= link_to "← 戻る", 'javascript:history.back()', class: "no-underline" %>
   </div>
 
   <div class="room-info-container">
@@ -52,6 +52,10 @@
                 <div>
                   <%= f.submit "予約する", class: "reservation-btn bg-coral" %>
                 </div>
+                <% else %>
+                  <div>
+                    <%= link_to "ログイン", :new_user_session, class: "login-btn-for-reservation bg-coral no-underline white-font-color" %>
+                  </div>
                 <% end %>    
         <% end %>
       </div>
