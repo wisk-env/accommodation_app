@@ -101,7 +101,6 @@ ul {
 
 .no-underline:hover {
   text-decoration: none;
-  color: #fff;
 }
 
 .user_tab_navigation {
@@ -384,6 +383,7 @@ ul {
 .cancel-reservation-btn {
   color: #6a6a6a;
   line-height: 58px;
+  display: block;
 }
 
 .cancel-reservation-btn:hover {
@@ -391,3 +391,20 @@ ul {
   text-decoration: none;
 }
   
+footer {
+  height: 465px;
+  background-color: #1c1d3b;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_container {
+  padding: 100px 32px 0;
+}
+
+.footer-logo {
+  width: 294px;
+  margin-bottom: 16px;
+}
