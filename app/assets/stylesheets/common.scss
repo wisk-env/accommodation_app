@@ -28,6 +28,10 @@ table td {
   color: #fff;
 }
 
+.page-title {
+  margin-bottom: 24px;
+}
+
 .first-view {
   background-image: url("https://rails-02-sample.herokuapp.com/assets/home/cover-lg.jpg");
   background-size: cover;
@@ -131,7 +135,6 @@ ul {
   display: flex;
   justify-content: flex-end;
   gap: 16px;
-  width: 40%;
   flex-wrap: wrap;
 }
 
@@ -163,4 +166,20 @@ ul {
   border-radius: 5px;
   padding: 10px 20px;
   text-align: center;
+}
+
+.form-container {
+  width: 702px;
+  margin: auto;
+}
+
+.room-form-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.room-form-label {
+  font-size: 20px;
+  font-weight: 600;
 }

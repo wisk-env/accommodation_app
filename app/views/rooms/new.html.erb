@@ -1,37 +1,37 @@
 <div class="section">
-  <h1>新規登録</h1>
 
   <%= render "shared/error", obj: @room %>
 
-  <%= form_with model: @room, local: true do |f| %>
-  <table>
-    <tr>
-      <th><%= f.label :room_name, "施設名" %></th>
-      <td><%= f.text_field :room_name, placeholder: "ルーム名を入力", class: "text_field" %></td>
-    </tr>
-    <tr>
-      <th><%= f.label :room_info, "施設詳細" %></th>
-      <td><%= f.text_area :room_info, placeholder: "施設詳細を入力", class: "text_area" %></td>
-    </tr>
-    <tr>
-      <th><%= f.label :fee, "料金" %></th>
-      <td><%= f.number_field :fee, placeholder: "一日あたりの料金を入力", class: "text_field" %></td>
-    </tr>
-    <tr>
-      <th><%= f.label :address, "住所" %></th>
-      <td><%= f.text_field :address, placeholder: "住所を入力", class: "text_field" %></td>
-    </tr>
-    <tr>
-      <th><%= f.label :room_image, "施設画像" %></th>
-      <td><%= f.file_field :room_image %></td>
-    </tr>
-    </table>
-    <%= f.hidden_field :user_id, value: current_user.id %>
-    <div class="btn-container mt-4">
-      <%= link_to "キャンセル", 'javascript:history.back()', class: "cancel-btn no-underline" %>
-      <div>
-        <%= f.submit "保存", class: "save-btn bg-coral" %>
+  <div class="form-container">
+    <h1 class="page-title">新規登録</h1>
+    <%= form_with model: @room, local: true do |f| %>
+      <div class="room-form-group">
+        <%= f.label :room_name, "施設名", class: "room-form-label" %>
+        <%= f.text_field :room_name, placeholder: "ルーム名を入力", class: "text_field" %>
       </div>
-    </div>
-  <% end %>
+      <div class="room-form-group">
+        <%= f.label :room_info, "施設詳細", class: "room-form-label" %>
+        <%= f.text_area :room_info, placeholder: "施設詳細を入力", class: "text_area" %>
+      </div>
+      <div class="room-form-group">
+        <%= f.label :fee, "料金", class: "room-form-label" %>
+        <%= f.number_field :fee, placeholder: "一日あたりの料金を入力", class: "text_field" %>
+      </div>
+      <div class="room-form-group">
+        <%= f.label :address, "住所", class: "room-form-label" %>
+        <%= f.text_field :address, placeholder: "住所を入力", class: "text_field" %>
+      </div>
+      <div class="room-form-group">
+        <%= f.label :room_image, "施設画像", class: "room-form-label" %>
+        <%= f.file_field :room_image %>
+      </div>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <div class="btn-container mt-4">
+        <%= link_to "キャンセル", 'javascript:history.back()', class: "cancel-btn no-underline" %>
+        <div>
+            <%= f.submit "保存", class: "save-btn bg-coral" %>
+        </div>
+      </div>
+    <% end %>
+  </div>   
 </div>
