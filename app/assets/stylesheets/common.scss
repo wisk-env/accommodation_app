@@ -1,11 +1,15 @@
+table {
+  width: 100%;
+}
+
 table th {
-  background-color: #afeeee;
-  padding: 10px 20px;
+  padding: 20px 40px;
+  border-bottom: 3px solid #212529;
 }
 
 table td {
-  background-color: #d3d3d3;
-  padding: 10px 20px;
+  padding: 20px 40px;
+  border-bottom: 3px solid lightgray;
 }
 
 .dropdown-divider {
