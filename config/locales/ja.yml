@@ -32,8 +32,8 @@ ja:
         fee: 料金
         address: 住所
       reservation:
-        check_in: チェックイン
-        check_out: チェックアウト
+        check_in: チェックイン日
+        check_out: チェックアウト日
         number_of_guests: 人数
     models:
       user: ユーザー
