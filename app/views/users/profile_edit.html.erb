@@ -1,4 +1,4 @@
-<div class="user-section">
+<div class="section">
   <%= render "shared/user_setting" %>
 
   <%= render "shared/error", obj: @user %>
@@ -21,7 +21,7 @@
       <%= f.label :introduction, '自己紹介' %><br />
       <%= f.text_area :introduction, autofocus: true, autocomplete: "introduction", class: "text_area" %>
     </div>
-    <div class="user-section-btn-container">
+    <div class="btn-container">
       <%= link_to "キャンセル", :users_profile, class: "cancel-btn no-underline" %>
       <div class="actions">
         <%= f.submit "保存", class: "save-btn bg-coral" %>
