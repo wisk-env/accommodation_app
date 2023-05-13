@@ -101,6 +101,7 @@ ul {
 
 .no-underline:hover {
   text-decoration: none;
+  color: #fff;
 }
 
 .user_tab_navigation {
@@ -333,4 +334,24 @@ ul {
   border: 1px solid #e0e0e0;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.rooms_conatiner {
+  padding: 40px 32px;
+  margin-bottom: 260px;
+}
+
+.search_room_results {
+  margin-bottom: 24px;
+  font-size: 20px;
+}
+
+.total_room_results {
+  font-weight: 600;
+}
+
+.room_details_link {
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 5px;
 }
