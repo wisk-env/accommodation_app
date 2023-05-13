@@ -28,7 +28,9 @@
       </li>
     </ul>
   <% else %>
+    <div class="header-logout">
       <%= link_to 'ログイン', :new_user_session, class: "btn btn-primary" %>
-      <%= link_to '新規登録', :new_user_registration %>
+      <%= link_to '新規登録', :new_user_registration, class: "sign-up-btn bg-coral" %>
+    </div>
   <% end %>
 </nav>
