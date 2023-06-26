@@ -1,0 +1,21 @@
+<div class="section">
+  <%= render "shared/user_setting" %>
+  <div class="form-container">
+    <div class="user-section-title">
+      <h2>アカウント</h2>
+      <div class="position-end">
+        <%= link_to "編集", :edit_user_registration, class: "btn btn-primary" %>
+      </div>
+    </div>
+    <table>
+      <tr>
+        <th><%= "メールアドレス" %></th>
+        <td><%= @user.email %></td>
+      </tr>
+      <tr>
+        <th><%= "パスワード" %></th>
+        <td><%= "******" %></td>
+      </tr>
+    </table>
+  </div>
+</div>

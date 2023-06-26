@@ -1,0 +1,52 @@
+<div class="first-view">
+  <h1 class="text-center text-white first-view-title">
+    Potepan Shareで<br>
+    まだ体験したことのない<br>
+    旅をしよう
+  </h1>
+  <div class="first-view-search">
+    <%= search_form_for @q, url: search_rooms_path do |f| %>
+      <%= f.label :address_cont, "エリアで検索", class: "text-white" %>
+      <%= f.text_field :address_cont, placeholder: "エリア名を入力", class: "form-control" %>
+      <%= f.submit "検索", class: "search-btn bg-coral" %>
+    <% end %>  
+  </div>
+</div>
+
+<% if flash[:notice] %>
+  <%= flash[:notice] %>
+<% end %>
+
+<div class="recommendedareas-section-title">
+  <h2>おすすめのエリア</h2>
+</div>
+<div class="recommendedareas">
+  <div class="area-search">
+    <%= link_to ({ controller: "rooms", action: "search", q: {address_cont: "東京"}}) do %>
+      <div class="area-img tokyo-img">
+        <span class="area-title">東京</span>
+      </div>
+    <% end %>
+  </div>
+  <div class="area-search">
+    <%= link_to ({ controller: "rooms", action: "search", q: {address_cont: "大阪"} }) do %>
+      <div class="area-img osaka-img">
+        <span class="area-title">大阪</span>
+      </div>
+    <% end %>
+  </div>
+  <div class="area-search">
+    <%= link_to ({ controller: "rooms", action: "search", q: {address_cont: "京都"} }) do %>
+      <div class="area-img kyoto-img">
+        <span class="area-title">京都</span>
+      </div>
+    <% end %>
+  </div>
+  <div class="area-search">
+    <%= link_to ({ controller: "rooms", action: "search", q: {address_cont: "札幌"} }) do %>
+      <div class="area-img sapporo-img">
+        <span class="area-title">札幌</span>
+      </div>
+    <% end %>  
+  </div> 
+</div>

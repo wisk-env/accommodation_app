@@ -1,0 +1,28 @@
+<div class="section">
+  <%= render "shared/user_setting" %>
+  <div class="form-container">
+    <div class="user-section-title">
+      <h2>プロフィール</h2>
+      <%= link_to "編集", :users_profile_edit, class: "btn btn-primary" %>
+    </div>
+
+    <% if flash[:notice] %>
+        <%= flash[:notice] %>
+    <% end %>
+
+    <table>
+      <tr>
+        <th><%= "アイコン画像" %></th>
+        <td><%= image_tag @user.avatar.url, class: 'rounded-circle', size: '100x100' %></td>
+      </tr>
+      <tr>
+        <th><%= "名前" %></th>
+        <td><%= @user.name %></td>
+      </tr>
+      <tr>
+        <th><%= "自己紹介" %></th>
+        <td><%= @user.introduction %></td>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<%= render "shared/search_form" %>
+<div class="room-details-section">
+  <h1>施設詳細</h1>
+  <div class="back_to_page_link">
+    <%= link_to "← 戻る", 'javascript:history.back()', class: "no-underline" %>
+  </div>
+
+  <div class="room-info-container">
+    <div>
+        <%= image_tag @room.room_image.url, size: '600x380' %>
+    </div>
+
+    <div class="room-details-body">
+      <div>
+        <%= "施設名 : " %>
+        <p class="room_details_name"><%= @room.room_name %></p>
+      </div>
+      <div>
+        <%= "住所 : " %>
+        <p class="room_details_address"><%= @room.address %></p>
+      </div>
+      <div>
+        <%= "宿泊料金 : " %>
+        <p class="room_details_price"><%= "¥" + @room.fee.to_s + "~/ 日" %></p>
+      </div>
+      <div>
+        <%= "紹介文 : " %>
+        <p class="room_for_more_details"><%= @room.room_info %></p>
+      </div>
+
+      <div class="reservation-form-container">
+        <h3>施設「<%= @room.room_name %>」のご予約はこちらから</h3>
+        <%= render "shared/error", obj: @reservation %>
+        <%= form_with(model: @reservation, local: true, url: confirm_path) do |f| %>
+            <div class="reservation-form">
+            <div>
+                <%= f.label :check_in, "チェックイン", class: "reservation_form_label" %><br>
+                <%= f.date_field :check_in, class: "reservation_field" %>
+            </div>
+            <div>
+                    <%= f.label :check_out, "チェックアウト", class: "reservation_form_label" %><br>
+                    <%= f.date_field :check_out, class: "reservation_field" %>
+            </div>
+            <div>
+                    <%= f.label :number_of_guests, "人数", class: "reservation_form_label" %><br>
+                    <%= f.number_field :number_of_guests, class: "reservation_field" %>
+            </div>
+            </div>
+                <% if user_signed_in? %>
+                <%= f.hidden_field :user_id, value: current_user.id %>
+                <%= f.hidden_field :room_id, value: @room.id %>
+                <div>
+                  <%= f.submit "予約する", class: "reservation-btn bg-coral" %>
+                </div>
+                <% else %>
+                  <div>
+                    <%= link_to "ログイン", :new_user_session, class: "login-btn-for-reservation bg-coral no-underline white-font-color" %>
+                  </div>
+                <% end %>    
+        <% end %>
+      </div>
+    </div>  
+  </div>
+</div>
